@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/scripts/Controleur.js" type="module"></script>
+    <noscript>L'application a besoin de JavaScript pour fonctionner!</noscript>
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <title>Palais Gourmet chez A&O</title>
+</head>
+<body>
+    <!-- Header (titre de la page) -->
+    <header>
+        <h1 onclick="controleur.afficherListe()">PALAIS GOURMET CHEZ A&O</h1>
+    </header>
+    <!-- Main (menu burger, navigation, recherche, météo et recettes) -->
+    <main>
+        <p class="menuBurger"><span id="iconeBurger" onclick="controleur.vue.basculerTiroir()">&#9776;</span></p>
+        <aside id="tiroir">
+            <h2>Recettes</h2>
+            <h3>Catégories</h3>
+            <ul class="nav">
+                <li onclick="controleur.afficherListe()">Accueil</li>
+                <li onclick="controleur.afficherListe('dessert')">Desserts</li>
+                <li onclick="controleur.afficherListe('poisson')">Poissons</li>
+                <li onclick="controleur.afficherListe('poulet')">Poulet</li>
+            </ul>
+            <h3>Rechercher</h3>
+            <form>
+                <input type="search" id="maRecherche" name="q" placeholder="Rechercher..."
+                    onkeyup="controleur.rechercher(this.value)">
+            </form>
+        </aside>
+        <section class="recettes"></section>
+    </main>
+    <!-- Footer (Texte droits d'auteur) -->
+    <footer>
+        <p>Copyright Shiny Team - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

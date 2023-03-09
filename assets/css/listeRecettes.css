@@ -1,0 +1,78 @@
+/*  --------------------------------------- */
+
+/*  listeRecettes.css */
+/*  Éléments de style pour la section liste de recettes */
+
+.recettes {
+    background-color: rgb(229, 228, 250);
+    margin: 5px 0;
+    min-height: 85vh;
+}
+
+.liste {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+@media only screen and (min-width: 640px) {
+    .liste {
+        column-gap: 2%;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+    .liste {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .liste {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.carte {
+    background-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    padding: 10px;
+    text-align: left;
+}
+
+.carte img {
+    border-radius: 10px;
+    height: auto;
+    width: 100%;
+}
+
+.carte p {
+    color: black;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+    width: 85vw;
+}
+
+@media only screen and (min-width: 640px) {
+    .carte p {
+        width: 240px;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .carte p {
+        width: 16.5vw;
+    }
+}
+
+.resultatZero {
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: center;
+}

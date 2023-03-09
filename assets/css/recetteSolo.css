@@ -1,0 +1,57 @@
+/*  --------------------------------------- */
+
+/*  recetteSolo.css */
+/*  Éléments de style pour la section une seule recette */
+
+.sect1Recette {
+    padding: 30px;
+}
+
+.sect1Recette article:not(.art1Recette):not(.art1Recette article) {
+    margin-top: 30px;
+}
+
+.art1Recette {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+@media only screen and (min-width: 640px) {
+    .art1Recette {
+        column-gap: 3vw;
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .art1Recette {
+        grid-template-columns: 1fr 3fr;
+    }
+}
+
+.art1Recette article {
+    margin-top: 0;
+}
+
+.art1Recette ul {
+    font-weight: bold;
+    list-style-type: none;
+    padding: 0;
+}
+
+.sect1Recette li {
+    margin-bottom: 5px;
+}
+
+.art1Recette li {
+    padding: 10px 0;
+}
+
+.img1Recette {
+    border: 10px solid white;
+    border-radius: 10px;
+    height: auto;
+    width: 100%;
+}
